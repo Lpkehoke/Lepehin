@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var string = "";
+		var temp = 0;
+
+		for (var i = 32; i < 100; i++) {
+			temp = i*i;
+			if ( ( Math.floor(temp / 1000) === Math.floor( (temp / 100) % 10 ) ) && ( (temp % 10) === Math.floor((temp % 100) / 10) ) )
+				string += (i*i + "");
+		}
+
+		alert(string);
+
+	</script>
+</body>
+</html>

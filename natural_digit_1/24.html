@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>24</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		function gcd(a , b) {
+			if (b != 0)
+				return gcd(b , a % b);
+			else
+				return a;
+		}
+
+		var digit = [123, 7213138, 112456552, 352321, 122221];
+		var firstDigit;
+		var answer;
+
+		for (var i = 0; i < 5; i++)
+			if (!(digit[i] & 1))
+				if (firstDigit == undefined)
+					firstDigit = digit[i];
+				else
+					answer = gcd(firstDigit , digit[i]);
+
+		alert(answer);
+
+	</script>
+</body>
+</html>

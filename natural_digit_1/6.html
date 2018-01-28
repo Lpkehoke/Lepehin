@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6</title>
+</head>
+<body>
+	<script>
+		"use strict";
+		var a , sum = 0 , temp;
+		a = Math.floor(Math.random() * 800 + 100);
+		temp = a;
+
+		while (temp > 0) {
+			sum += Math.floor(temp % 10);
+			temp /= 10;
+		}
+
+		alert("Digit = " + a + " ; sum = " + sum);
+
+	</script>
+</body>
+</html>

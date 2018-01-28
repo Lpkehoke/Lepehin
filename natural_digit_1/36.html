@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>36</title>
+</head>
+<body>
+	
+	<script>
+		"use strict";
+
+		var k = 24;
+		var answer = "1";
+
+		for (var i = 2; i < k; i++) {
+			if (gcd(i , k) === 1)
+				answer += (" " + i);
+		}
+
+		alert(answer);
+
+
+		function gcd(a , b) {
+			if (b !== 0)
+				return gcd(b , a%b);
+			else
+				return a;
+		}
+
+	</script>
+
+</body>
+</html>

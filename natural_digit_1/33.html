@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>33</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var a = 4552;
+		var b = 96548;
+		var n = 31;
+		var answer = "";
+
+		if (a % n) {
+			a += n - a%n;
+		}
+
+		while(a <= b) {
+			answer += (a + " ");
+			a += n;
+		}
+
+		alert(answer);
+
+	</script>
+</body>
+</html>

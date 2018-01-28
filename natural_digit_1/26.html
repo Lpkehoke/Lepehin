@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>26</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var sumDevider = 0;
+		var answer = "";
+
+		for (var i = 900; i < 9000; i++) {
+			
+			for (var j = 1; j < i; j++) {
+				if (i % j == 0)
+					sumDevider += j;
+			}
+
+			if (sumDevider == i)
+				answer += (sumDevider + " ");
+
+			sumDevider = 0;
+
+		}
+
+		alert(answer);
+
+
+	</script>
+</body>
+</html>

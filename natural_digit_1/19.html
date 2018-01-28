@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19</title>
+</head>
+<body>
+	<script>
+		
+		var a = "123";
+		var b = "313";
+		var answer = "";
+
+		for (var i = 0; i < a.length; i++)
+			point: for (var j = 0; j < b.length; j++)
+				if (a[i] == b[j]) {
+					for (var k = 0; k < answer.length; k++)
+						if (a[i] == answer[k])
+							break point;
+						answer += a[i];
+				}
+
+		alert(answer);
+
+	</script>
+</body>
+</html>

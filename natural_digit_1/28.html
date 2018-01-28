@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>28</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var a = 10;
+		var b = 12;
+		var c = 8;
+		var d = 6;
+
+		var f = [a , b];
+		var s = [c , d];
+
+	 	var max , min;
+
+	 	if (b > a) f = [b , a];
+	 	if (d > c) s = [d , c];
+
+	 	max = f[0] > s[0] ? f[0] : s[0];
+	 	min = f[1] < s[1] ? f[1] : s[1];
+
+	 	alert(max + " " + min);
+
+	</script>
+</body>
+</html>

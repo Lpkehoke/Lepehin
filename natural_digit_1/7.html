@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7</title>
+</head>
+<body>
+	<script>
+		"use strict";
+		var a , max = 0 , temp;
+		a = Math.floor(Math.random() * 800 + 100);
+		temp = a;
+
+		while (temp > 0) {
+			if (max < Math.floor(temp % 10))
+				max = Math.floor(temp % 10);
+			temp /= 10;
+		}
+
+		alert("Digit = " + a + " ; max = " + max);
+
+	</script>
+</body>
+</html>

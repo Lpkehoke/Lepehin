@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>18</title>
+</head>
+<body>
+	<script>
+		
+		var digit = 0;
+
+		for (var i = 100; ;i++) {
+			digit = +(i * i);
+			digit += "";
+			if (digit[0] == 1 && digit[1] == 9 && digit[3] == 8) {
+				alert(digit);
+				break;
+			}
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>31</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var time = [23 , 59 , 52];
+		
+		if (time[2] + 10 > 60) {
+			time[2] -= 50;
+			if (time[1] === 59) {
+				time[1] = 0;
+				if (time[0] === 23) 
+					time[0] = 0;
+			} else
+				time[1]++; 
+		} else
+			time[2] += 10;
+
+		alert(time[0] + " " + time[1] + " " + time[2]);
+
+	</script>
+</body>
+</html>

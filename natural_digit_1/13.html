@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>13</title>
+</head>
+<body>
+	<script>
+		
+		var a , b , t;
+		
+		// a = Math.random() * 80 + 10;
+		// b = Math.random() * 80 + 10;
+
+		a = 36;
+		b = 25;
+
+		var inv = false;
+
+		if (a > b) {
+			inv = true;
+		}
+
+		t = b;
+
+		b = Math.sqrt(a * b);
+		a = (a + t) / 2;
+
+		if (!inv)
+			alert(a + " " + b);
+		else
+			alert(b + " " + a);
+
+	</script>
+</body>
+</html>

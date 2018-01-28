@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>25</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var k = 1000;
+		var sumDevider = 0;
+		var answer = "";
+
+		for (var i = 2; i < k; i++) {
+			
+			for (var j = 1; j < i; j++) {
+				if (i % j == 0)
+					sumDevider += j;
+			}
+
+			if (sumDevider == i)
+				answer += (sumDevider + " ");
+
+			sumDevider = 0;
+
+		}
+
+		alert(answer);
+
+
+	</script>
+</body>
+</html>

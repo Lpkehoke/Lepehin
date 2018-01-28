@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>44</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var start = [0, 10, 0, 1, 1, 0, 0, 0, 0, 0];
+
+		var arr= [];
+		var k1 = 13;
+		var k2 = 18;
+
+		var answer = "";
+
+		for (var i = 0; i < 10; i++)
+			arr[i] = 0;
+
+		for (i = k1; i <= k2; i++) {
+			i += "";
+			for (var j = 0; j < i.length; j++)
+				arr[i[j]]++;
+			i = +i;
+		}
+
+		if (weight(arr) <= weight(start)) {
+
+			for (var i = 0; i < 10; i++)
+				if (start[i] < arr[i]) {
+					start[i] = arr[i] - start[i]; // заполняем массив старт, тем чего не хватает
+					arr[i] = 0;
+				}
+				else if (arr[i] < start[i]) {
+					arr[i] = start[i] - arr[i]; // заполняем другой массив лишними
+					start[i] = 0;
+				}
+				else {
+					arr[i] = 0;
+					start[i] = 0;
+				}
+
+			for (var i = 0; i < 10; ++i)
+				if (start[i])
+					for (var j = 0; j < 10; j++)
+						if (arr[j] && start[i]) {
+							answer += "меняем" + j + "на" + i + "\n";
+							arr[j]--;
+							start[i]--;
+							j--;
+						} else if (!start[i])
+							break;
+		}
+
+		alert(answer);
+
+		function weight(a) {
+			var sum = 0;
+			for (var i = 0; i < a.length; i++)
+				sum +=a[i];
+			return sum;
+		}
+
+	</script>
+</body>
+</html>

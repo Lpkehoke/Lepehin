@@ -1,0 +1,65 @@
+<script>
+	'use strict';
+	class SuperSimple {
+
+		constructor (...arg) {
+			this.currentNumber = 0;
+		};
+
+		_createArroy (a = '') {
+			a += '';
+			let b = [];
+			for (let i = 0; i < a.length; i++)
+				b[i] = a[i];
+			return b;
+		};
+
+		_isSimple (...arg) {
+			let a = this.currentNumber.join('');
+			for (let i = 2; i < +a / 2; i++)
+				if (+a % i === 0)
+					return false;
+			return true;
+		};
+
+		_createNumber () {
+			let arr = this.currentNumber;
+			let i = arr.length - 2;
+			while (i != -1 && arr[i] >= arr[i+1]) i--;
+			if (i === -1)
+				return false;
+			let j = arr.length - 1;
+			while (arr[i] >= arr[j]) j--;
+			arr[j] = [arr[i] , arr[i] = arr[j]][0];
+			let l = i + 1;
+			let r = arr.length - 1;
+			while (l < r) {
+				arr[l] = [arr[r] , arr[r] = arr[l]][0];
+				l++;
+				r--;
+			}
+			return true;
+		};
+
+		checkDigit (a) {
+				this.currentNumber = this._createArroy(a);
+				this.currentNumber.sort( (a , b) => a - b );
+				if ( this._isSimple() ) {
+					while (this._createNumber())
+						if (!this._isSimple())
+							return false;
+					return true;
+				} else
+					return false;
+		};
+	};
+
+	let a = new SuperSimple;
+
+	console.log(a.checkDigit(113));
+	console.log(a.checkDigit(263));
+	console.log(a.checkDigit(797));
+	console.log(a.checkDigit(919));
+	console.log(a.checkDigit(317));
+
+</script>

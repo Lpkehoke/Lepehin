@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>51</title>
+</head>
+<body>
+	<script>
+		'use strict';
+		let answer = '';
+		for (let i = 1000; i < 10000; i++) {
+			i += '';
+			if (Math.sqrt(+i) === +(i[0] + '' + i[1]) + Math.sqrt(+(i[2] + '' + i[3])))
+				answer += i + ' ';
+		}
+		alert(answer);
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>52</title>
+</head>
+<body>
+	<script>
+		'use strict';
+		let a = +prompt();
+		let b = +prompt();
+		let k = +prompt();
+
+		let answer = '';
+
+		for (let i = a; i < b; i++)
+			if (sum(i) % k === 0 && sum(i + 1) % k === 0)
+				answer += i + ' ';
+		alert(answer);
+
+		function sum(a) {
+			a += '';
+			let retSum = 0;
+			for (let i = 0; i < a.length; i++)
+				retSum += +a[i];
+			return retSum;
+		}
+	</script>
+</body>
+</html>

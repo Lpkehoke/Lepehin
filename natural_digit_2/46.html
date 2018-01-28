@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>46</title>
+</head>
+<body>
+	<script async>
+		"use strict";
+
+		var m = 3; // input
+
+		var sum = 0;
+		var n = 1;
+		var answer = "";
+		var length = 0;
+
+		sum += "";
+
+		while (sum.length < m + 1) {
+			length = sum.length;
+			sum = +sum;
+			if (checkNumber(sum) && length == m)
+				answer += " " + sum;
+			sum += n;
+			n++;
+			// console.log(sum);
+			sum += "";
+		}
+
+		alert(answer);
+
+
+		function checkNumber(a) {
+			a += "";
+			var temp;
+			if (a.length === 1) {
+				return a;
+			} else {
+				temp = a[0];
+				a = a.slice(1);
+				if (temp == checkNumber(a))
+					return temp;
+				else
+					return false;
+			}
+		}
+
+	</script>
+</body>
+</html>

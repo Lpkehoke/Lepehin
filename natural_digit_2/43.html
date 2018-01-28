@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>43</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var arr= [];
+		var k1 = 25;
+		var k2 = 32;
+
+		for (var i = 0; i < 10; i++)
+			arr[i] = 0;
+
+		for (i = k1; i <= k2; i++) {
+			i += "";
+			for (var j = 0; j < i.length; j++)
+				arr[i[j]]++;
+			i = +i;
+		}
+
+		alert(arr);
+
+
+	</script>
+</body>
+</html>

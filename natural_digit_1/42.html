@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>42</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var	answer = "";
+
+		for (var i = 105; i < 1000; i+=7) {
+			i += "";
+
+			if ((+i[0] + +i[1] + +i[2]) % 7) {
+				answer += " " + i;
+				if (+i[2] & 1)
+					answer += " simple: " + checkSimple(i); // хотя это глупо, ведь число уже и так делится на 7
+			}
+
+			answer += "   ";
+
+			i = +i;
+		}
+
+		alert(answer);
+
+
+		function checkSimple(a) {
+			for (var i = 2; i < a/2; i++)
+				if (a % i == 0)
+					return false;
+			return true;
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>35</title>
+</head>
+<body>
+	
+	<script>
+		"use strict";
+
+		var k = 25;
+		var temp = 0;
+		var answer = "";
+
+		for (var i = 100; i < 1000; i++) {
+			i += "";
+			temp = +i[0] + +i[1] + +i[2];
+			if (temp == k)
+				answer += (i + " ");
+			i = +i;
+		}
+
+		alert(answer);
+
+
+	</script>
+
+</body>
+</html>

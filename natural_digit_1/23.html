@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>23</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var ticket = "123321";
+
+	 	var	sum = 0;
+
+		for(var i = 0; i < ticket.length; i++)
+			if (i < 3)
+				sum += +ticket[i];
+			else
+				sum -= +ticket[i];
+
+		if (sum)
+			alert("Bad ticket");
+		else
+			alert("Lucky ticket");
+
+
+	</script>
+</body>
+</html>

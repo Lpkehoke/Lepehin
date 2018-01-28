@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>50</title>
+</head>
+<body>
+	<script>
+		'use strict';
+		let k = 2; // input
+
+		for (let a = 1234;a < 9876; a++) {
+			if (valid(a) && ( (a / rev(a)) === k ) )
+				alert(a);
+		}
+
+		function valid(a) {
+			a += '';
+			for (let i = 0; i < a.length; i++)
+				for (let j = i + 1; j < a.length; j++)
+					if (a[i] == a[j] || a[i] == 0)
+						return false;
+			return true;
+		}
+
+		function rev(a) {
+			a += '';
+			let b = '';
+			for (let i = a.length - 1; i > -1; i--)
+				b += a[i];
+			return +b;
+		}
+
+	</script>
+</body>
+</html>

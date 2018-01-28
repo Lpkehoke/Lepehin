@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>47</title>
+</head>
+<body>
+	<script async>
+		"use strict";
+
+		var n = 10;
+		var answer = "";
+
+		while (n < 1000) {
+			n += "";
+			if(checkDigit(n))
+				answer += " " + n;
+			n++;
+		}
+
+		alert(answer);
+
+		function checkDigit(a) {
+
+			var sum = sumDigit(a);
+
+			for (var i = 2; i < 10; i++)
+				if ( sum !== sumDigit(a*i) )
+					return false;
+
+			return true;
+
+		}
+
+		function sumDigit(a) {
+			a += "";
+			var localSum = 0;
+			for (var i = 0; i < a.length; i++)
+				localSum += +a[i];
+			return localSum;
+		}
+
+	</script>
+</body>
+</html>

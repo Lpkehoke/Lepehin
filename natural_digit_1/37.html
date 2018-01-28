@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>37</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+	 	var	answer = "";
+		
+		for (var i = 1000; i < 10000; i++) {
+			i += "";
+			if (secondCheck(i[0] , i[1] , i[2] , i[3]) && checkDiferent(i[0] , i[1] , i[2] , i[3]))
+				answer += (i + " ");
+			i = +i;
+		}
+
+		alert(answer);
+
+
+
+		function checkDiferent(a, b, c, d) {
+
+			for (var i = 0; i < 4; i++) {
+				for (var j = i; j < 4; j++) {
+					if (+arguments[i] == +arguments[j+1])
+						return false;
+				}
+			}
+
+			return true;
+		
+		}
+
+		function secondCheck(a, b, c, d) {
+
+			if (+(a+b) - +(c+d) == +a + +b + +c + +d)
+				return true;
+			else
+				return false;
+
+		}
+
+	</script>
+</body>
+</html>

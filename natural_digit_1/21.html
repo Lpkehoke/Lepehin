@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>21</title>
+</head>
+<body>
+	<script>
+		"use strict";
+		var i = 2;
+		var j = 3;
+		var k = 3;
+
+		for (; i<= j; i++) {
+			for (j = 3 , k = j ; j <= k; j++) {
+				for(k = 3; ((i + j) * k + i*j) >= i*j*k; k++) {
+					if ((i + j) * k + i*j == i*j*k)
+						alert (i + " " + j + " " + k);
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

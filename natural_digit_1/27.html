@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>27</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var friendDigit = "";
+		var n = 9000;
+		var firstSum = 0;
+		var secondSum = 0;
+		var alradyFriendDigit = [];
+
+		recount:
+		for (var i = 2; i < n; i++) {
+
+			firstSum = sumDevider(i);
+			secondSum = sumDevider(firstSum);
+			
+			if (secondSum === i && i !== firstSum) {
+				for (var j = 0; j < alradyFriendDigit.length; j++)
+					if (alradyFriendDigit[j] === i)
+						continue recount;
+					
+					alradyFriendDigit.push(firstSum);
+					friendDigit += i + " " + firstSum + "; ";
+			}
+		}
+
+		alert(friendDigit);
+
+
+		function sumDevider( digit ) {
+			
+			var sum = 0;
+
+			for (var i = 1; i < digit; i++)
+				if (digit % i === 0)
+					sum += i;
+
+			return sum;
+		}
+
+	</script>
+</body>
+</html>

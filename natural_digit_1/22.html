@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>22</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var digit = 1099835;
+		digit += "";
+		var sum = 0;
+		for (var i = 0; i < digit.length; i++)
+			if (i & 1)
+				sum += +digit[i];
+			else
+				sum -= +digit[i];
+
+		if (sum % 11 == 0)
+			alert("The number is a multiple of 11: " + digit + " = " + "11 * " + digit / 11);
+		else
+			alert("The number is not a multiple of 11");
+
+
+	</script>
+</body>
+</html>

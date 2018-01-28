@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>30</title>
+</head>
+<body>
+	<script>
+		"use strict";
+
+		var k = 7;
+		var answer = "";
+		var last = 1;
+
+		for (var i = 100; i < 1000; i++) {
+			
+			if (Math.floor(i / 100) != last) {
+				alert(answer);
+				answer = "";
+				last++;
+			}
+
+			if (i % k === 0)
+				answer += i + " ";
+
+		}
+
+		alert(answer);
+		
+
+	</script>
+</body>
+</html>

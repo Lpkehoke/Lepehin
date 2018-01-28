@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>40</title>
+</head>
+<body>
+	<script>
+
+		var temp , answer = "";
+		
+		for (var i = 100; i < 1000; i++) {
+			temp = (i*i) + "";
+			if (temp[temp.length - 3] == temp[temp.length - 2] && temp[temp.length - 1] == temp[temp.length - 2])
+				answer += i + " ";
+		}
+
+		alert(answer);
+
+	</script>
+</body>
+</html>
